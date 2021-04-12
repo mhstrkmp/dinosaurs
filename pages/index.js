@@ -2,7 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 
-const defaultEndpoint = `https://pixabay.com/api/?key=${process.env.PIXABAY_API_KEY}&q=unicorn&image_type=illustration&safesearch=true&per_page=200`;
+const defaultEndpoint = `https://pixabay.com/api/?key=${process.env.PIXABAY_API_KEY}&q=dinosaur&safesearch=true&per_page=200`;
 
 export async function getServerSideProps() {
   const res = await fetch(defaultEndpoint);
@@ -16,28 +16,32 @@ export async function getServerSideProps() {
 
 export default function Home({ data }) {
   const defaultImage =
-    "https://pixabay.com/get/g70ca273bbad689ba8a4c6afc71b964928b0532d00e8f57c32a67e64ae97fdebff9ede7f290c363b797aa96b64e9ec1da99bdf6921c74c2cf5f5a84d0d24dccd4_640.png";
+    "https://pixabay.com/get/g24b944e06690b25c6964b8265816d7bbdc25b6acf7bb3e2aef062ced32c8ad9e58442cfc8b3b5220cb04c888e18ab28c_640.png";
   const { hits = [] } = data;
   const [image, setImage] = useState(defaultImage);
   const [isLoading, setIsLoading] = useState(false);
   const getNewImage = () => {
     setIsLoading(!isLoading);
     setImage(hits[Math.floor(Math.random() * hits.length)].webformatURL);
+    console.log(image);
   };
   const handleOnClick = async () => {
     getNewImage();
   };
 
   return (
-    <div className="w-full h-full min-h-screen flex flex-col items-center bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400 font-body tracking-wide">
+    <div className="w-full h-full min-h-screen flex flex-col items-center text-white font-body tracking-wide bg-gradient-to-br from-blue-700 via-blue-800 to-gray-900">
       <Head>
-        <title>Leoniecorns</title>
+        <title>Tyrannosaurus Lennart</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <header>
-        <h1 className="p-8 text-center text-3xl font-semibold">
-          🦄 Leoniecorns 🦄
+        <h1 className="p-8 text-center text-3xl font-semibold my-2 py-0">
+          Tyrannosaurus
         </h1>
+        <h2 className="p-8 text-center text-3xl font-semibold py-1">
+          🦖 Lennart 🦖
+        </h2>
       </header>
       <main className="p-4 flex flex-grow justify-center items-center">
         <div className="z-10">
@@ -85,7 +89,7 @@ export default function Home({ data }) {
             className="bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150 text-white font-bold py-2 px-4 rounded-full"
             onClick={handleOnClick}
           >
-            Nächstes Einhorn
+            Nächster Dino
           </button>
         )}
       </div>
