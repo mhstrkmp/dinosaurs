@@ -1,8 +1,6 @@
-Well, my godchild loves 🦄 unicorns 🦄.
+Well, my nephew loves 🦖 dinosaurs 🦖.
 
 So, I built something ...
-
-<img width="320" alt="unicorns" src="https://user-images.githubusercontent.com/5558193/114394780-e0e0d800-9b9b-11eb-916e-9c75c5c803f6.png">
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
