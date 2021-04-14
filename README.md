@@ -2,6 +2,8 @@ Well, my nephew loves 🦖 dinosaurs 🦖.
 
 So, I built something ...
 
+<img width="320" alt="dinosaurs" src="https://user-images.githubusercontent.com/5558193/114409470-c7935800-9baa-11eb-91d8-fd1cecc548b1.png">
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
